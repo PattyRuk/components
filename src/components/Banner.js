@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-const Banner = ({ title, text }) => {
+const Banner = () => {
  return (
   <section className="banner">
   <div className="banner-content">
