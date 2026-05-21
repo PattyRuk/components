@@ -43,7 +43,6 @@ body {
     border-color: var(--secondary-blue);
 }
 
-/* Secondary Button Fixes */
 .secondary {
     background-color: transparent;
     color: var(--card-bg);
@@ -118,6 +117,47 @@ body {
     gap: 15px;
 }
 
+/* Upload Form (Concise Addition) */
+.upload-form-container {
+    max-width: 360px;
+    margin: 0 auto 24px auto;
+    padding: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.upload-form h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+.form-group input[type="text"] {
+    padding: 6px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--bg-color);
+}
+.form-group input[type="text"]:focus {
+    outline: 1px solid var(--primary-blue);
+}
+
 /* Gallery */
 .gallery-section {
     padding: 60px 40px; 
@@ -138,11 +178,42 @@ body {
     transform: translateY(-6px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
-.gallery-item img {
-    width: 100%;
+
+/* Image Container & Delete Button (Concise Addition) */
+.image-container {
+    position: relative;
     height: 220px;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--color-red);
+    color: var(--card-bg);
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+.gallery-item:hover .delete-btn {
+    opacity: 1;
+}
+.delete-btn:hover {
+    background: var(--color-red-2);
+}
+
 .gallery-item-title {
     padding: 15px;
     font-size: 1.1rem;
@@ -161,7 +232,6 @@ body {
     border-top: 1px solid var(--border-color);
 }
 
-
 @media (max-width: 992px) {
     .banner h2 { 
         font-size: 2.8rem; 
@@ -175,4 +245,3 @@ body {
         grid-template-columns: 1fr;
     }
 }
-
