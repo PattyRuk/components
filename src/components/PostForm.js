@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const PostForm = ({ onAddPost }) => {
   const [titleInput, setTitleInput] = useState('');
@@ -29,7 +29,6 @@ const PostForm = ({ onAddPost }) => {
       <form onSubmit={handleFormSubmit} className="upload-form">
         <h3>Create a New Post</h3>
         <div className="form-group">
-          <label htmlFor="post-title">Post Title</label>
           <input
             type="text"
             id="post-title"
@@ -39,7 +38,6 @@ const PostForm = ({ onAddPost }) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="post-image">Upload Image</label>
           <input
             type="file"
             id="post-image"
@@ -47,7 +45,7 @@ const PostForm = ({ onAddPost }) => {
             onChange={(e) => setFileInput(e.target.files ? e.target.files[0] : null)}
           />
         </div>
-        <button type="submit" className="btn primary">
+        <button type="submit" id="post-btn" className="btn primary">
           Publish Post
         </button>
       </form>

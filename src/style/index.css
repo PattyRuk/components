@@ -20,6 +20,8 @@ body {
     background-color: var(--bg-color);
 }
 
+
+
 /* Button */
 .btn {
     padding: 10px 20px;
@@ -119,9 +121,10 @@ body {
 
 /* Upload Form (Concise Addition) */
 .upload-form-container {
-    max-width: 360px;
-    margin: 0 auto 24px auto;
-    padding: 16px;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 25px;
+    padding: 10px;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 6px;
@@ -129,13 +132,12 @@ body {
 .upload-form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 .upload-form h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 800;
     text-align: center;
-    margin: 0;
 }
 .form-group {
     display: flex;
@@ -158,9 +160,18 @@ body {
     outline: 1px solid var(--primary-blue);
 }
 
+#post-image {
+    font-size: 1rem;
+}
+
+#post-btn {
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
 /* Gallery */
 .gallery-section {
-    padding: 60px 40px; 
+    padding: 20px 40px; 
 }
 .gallery-grid {
     display: grid;

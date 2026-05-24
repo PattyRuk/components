@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PostForm from './PostForm';
 
 import image1 from '../media/aesthetic.jpg';
